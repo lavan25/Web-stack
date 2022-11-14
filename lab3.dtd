@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE NCC [
+<!ELEMENT PLAYERS (reg_no,name,collegename,bt_name,wing,certificates)>
+<!ELEMENT ID_no (#PCDATA)>
+<!ELEMENT name(firstname,lastname)>
+<!ELEMENT firstname(#CDATA)>
+<!ELEMENT lastname(#CDATA)>
+<!ELEMENT SPORTname (#PCDATA)>
+]>
