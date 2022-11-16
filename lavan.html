@@ -8,7 +8,7 @@
         }
         h1
         {
-            font-size: 40px;
+            font-size: 50px;
         }
         h3
         {
@@ -16,7 +16,7 @@
         }
         .ptex
         {
-            font-size: 20px;
+            font-size: 30px;
             margin-left: 10%;
             margin-right: 10%;
         }
@@ -59,7 +59,10 @@
 <p><a href="https://www.nike.com/in/">NIKE</a></p>
 <p><a href="https://www.adidas.co.in/">ADIDAS</a></p>
 <p><a href="https://www.reebok.in/">REEBOK</a></p>
-<div style="margin-top: 20px;" class="ptex">
+<p><a href="video.html">BASKETBALL COURT</a></p>
+<p><a href="dddddd.html">hear some music!!!!!!!!</a></p>
+
+<div style="margin-top: 50px;" class="ptex">
 </div>
 <h1 align="center">EQUIPMENTS</h1>
 <p><strong>>Click on the the image to go the website:</strong></p>
@@ -68,25 +71,23 @@
         <th  colspan="2"></th>
     </tr>
 
-<img src="C:\Users\Lavan\Downloads\kakaka.jpg" alt="sports" usemap="#workmap" width="250" height="200">
+<img src="C:\Users\Lavan\Downloads\kakaka.jpg" alt="sports" usemap="#workmap" width="450" height="400">
 
 <map name="workmap">
   <area shape="rect" coords="34,44,270,350" alt="ball" href="https://www.sportsjam.in/">
-  <img src="C:\Users\Lavan\Downloads\player.png" alt="sports" usemap="#workmap" width="250" height="200">
-
-<map name="workmap">
   <area shape="rect" coords="34,44,270,350" alt="ball" href="https://www.nike.com/in/">
+  
 </map>
 <style>
     table, th, td {
       border:1px solid black;
-    }
+    } 
     </style>
     <body>
     
     <h2>ITEM TABLE</h2>
     
-    <table style="width:100%">
+    <table style="font-size:70px">
       <tr>
         <th>Company</th>
         <th>Item</th>
@@ -103,5 +104,74 @@
         <td>S,M,L</td>
       </tr>
     </table>
+    <h1>GEt UPDATES OF OFFERS</h1>
+
+<p>THE OFFERS WILL MAILED TO THE GIVE MAIL ID</p>
+
+<form action="/action_page.php" novalidate>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+    
+    <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("thank you",10,50);
+    
+    </script>
+     <h2>Check Your Location</h2>   
+     <button onclick="getlocation();">Check Position</button>   
+     <div id="loc" style="width: 400px; height: 200px; margin-left: 100px;"></div>   
+      
+             <script src="https://maps.google.com/maps/api/js?sensor=false"> </script>   
+      
+             <script type="text/javascript">   
+             function getlocation(){   
+                 if(navigator.geolocation){   
+                     navigator.geolocation.getCurrentPosition(showPos, showErr);   
+                 }  
+                 else{  
+                     alert("Sorry! Geolocation API is not supported.")  
+                 }  
+             }   
+      
+             function showPos(position){   
+                 latt = position.coords.latitude;   
+                 long = position.coords.longitude;   
+                 var lattlong = new google.maps.LatLng(latt, long);   
+                 var myOptions = {   
+                     center: lattlong,   
+                     zoom: 15,   
+                     mapTypeControl: true,   
+                     navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL}   
+                 }   
+                 var maps = new google.maps.Map(document.getElementById("loc"), myOptions);   
+                 var markers =   
+                 new google.maps.Marker({position:lattlong, map:maps, title:"I am here!"});   
+             }   
+             function showErr(error) {  
+                   switch(error.code){  
+                   case error.PERMISSION_DENIED:  
+                  alert("User denied the request for Geolocation API.");  
+                   break;  
+                  case error.POSITION_UNAVAILABLE:  
+                  alert("USer location information is unavailable.");  
+                 break;  
+                 case error.TIMEOUT:  
+                 alert("The request to get user location timed out.");  
+                 break;  
+                case error.UNKNOWN_ERROR:  
+                 alert("An unknown error occurred.");  
+                 break;  
+                }  
+             }        
+             </script>   
+  
+    
 </body>
 </html>
