@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="hhh.xsl"?>
 <SPORTS>
    <PLAYERS>
       <reg_no>108701</reg_no>
@@ -46,7 +47,7 @@
          <firstname>KANAK</firstname>
          <lastname>-</lastname>
       </name>
-      <sportname>BHAVANS</sportname>
+      <sportname>Volleyball</sportname>
    </PLAYERS>
    <PLAYERS>
       <reg_no>108707</reg_no>
@@ -64,4 +65,4 @@
       </name>
       <sportname>Basketball</sportname>
    </PLAYERS>
-</SPORTS>s
+</SPORTS>
