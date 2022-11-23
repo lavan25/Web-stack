@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button type="button" onclick="disp()">Display sportnames</button>
+<div id="demoo"></div>
+
+<script>
+function disp()
+{
+var x;
+if(window.XMLHttpRequest)
+{
+x=new XMLHttpRequest();
+}
+else
+{
+x=new ActiveXObject("Microsoft.XMLHTTP");
+}
+x.onreadystatechange=function()
+{
+if(x.readyState==4 && x.status==200)
+{
+  myFunction(this);
+}
+}
+x.open("GET","lab_3.xml",true);
+x.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<table border='1px'><tr><th>regno</th><th>sportname</th></tr>";
+  var y = xmlDoc.getElementsByTagName("PLAYERS");
+  for (i = 0; i <y.length; i++) {
+    table += "<tr><td>" +
+    y[i].getElementsByTagName("reg_no")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    y[i].getElementsByTagName("sportname")[0].childNodes[0].nodeValue +
+    "</td></tr>"
+  }
+  table+="</table>";
+  document.getElementById("demoo").innerHTML = table;
+}
+</script>
+
+</body>
+</html>
