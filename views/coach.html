@@ -1,0 +1,29 @@
+<h2>COACHES PAGE</h2>
+
+<div ng-controller="coach_ctr">
+
+	<table class="table table-hover bg-dark text-white table-striped table-bordered">
+	
+		<thead>
+			<tr>
+				<th>NAME</th>
+				<th>AGE</th>
+				<th>SPORT</th>
+			</tr>
+		
+		</thead>
+		
+		<tbody>
+		
+			<tr ng-repeat="coach in coach">
+				<td>{{ coach.name }}</td>
+				<td>{{ coach.age }}</td>
+				<td>{{ coach.sport }}</td>
+			</tr>
+		
+		</tbody>
+		
+	
+	</table>
+
+</div>

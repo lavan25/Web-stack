@@ -1,144 +1,72 @@
- <!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html ng-app="myMod">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+<title>lab8</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="angular.js"></script>
+<script src="route.js"></script>
+<script src="module1.js"></script>
 </head>
-
 <style>
-    .box {
-        width: 100%;
-    }
-
-    .innerbox {
-        background-color: rgb(173, 211, 245);
-        width: 50%;
-        height: 50%;
-        margin-left: 23%;
-        padding: 20px;
-        margin-top: 10%;
-        border: 2px solid black;
-    }
-
-    .RegId {
-        padding: 10px;
-    }
-
-    .button {
-        padding: 5px 5px;
-        font-size: 10px;
-        text-align: center;
-        cursor: pointer;
-        color: #fff;
-        background-color: #0ca5bc;
-        border-radius: 20px;
-        box-shadow: 0 10px #999;
-    }
-
-    .button:hover {
-        background-color: #007095
-    }
-
-    .button:active {
-        background-color: #007095;
-        box-shadow: 0 5px rgb(25, 25, 25);
-        transform: translateY(5px);
-    }
+	li{
+		color: black;
+	}
 </style>
-
-<script>
-
-    function setCookie() {
-        var obj = {};//Creating custom object  
-        obj.RegId = document.getElementById("RegId").value;
-        obj.email = document.getElementById("Email").value;
-        obj.Password = document.getElementById("Password").value;
-
-        //Converting JavaScript object to JSON string      
-        var jsonString = JSON.stringify(obj);
-
-        document.cookie = jsonString;
-        var now = new Date();
-        now.setMonth(now.getMonth() + 1);
-        cookievalue = escape(document.myform.customer.value) + ";"
-
-        document.cookie = "name=" + cookievalue;
-        document.cookie = "expires=" + now.toUTCString() + ";"
-        document.write("Setting Cookies : " + "name=" + cookievalue);
-    }
-    function getCookie() {
-        if (document.cookie.length != 0) {
-            //Parsing JSON string to JSON object  
-            var obj = JSON.parse(document.cookie);
-
-            alert("RegId=" + obj.RegId + " " + "Email=" + obj.email + " " + "Password=" + obj.Password);
-        }
-        else {
-            alert("Cookie not available");
-        }
-    }
-    function show() {
-        var value = document.getElementById("demo").value;
-        if (value != "Select Color") {
-            document.bgColor = value;
-            document.cookie = "color=" + value + ";";
-        }
-    }
-    function clickCounter() {
-        if (sessionStorage.clickcount) {
-            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
-        } else {
-            sessionStorage.clickcount = 1;
-        }
-        document.getElementById("demo").innerHTML = sessionStorage.clickcount;
-    }
-    function save_data() {
-        var input = document.getElementById('saveServer').value;
-        localStorage.setItem('server', input);
-        document.getElementById('saveServer').value = localStorage.getItem('server');
-    }
-    function deleteCooki1() {
-        document.cookie = RegId + ";max-age=0";
-        RegId = document.cookie;
-        alert("Cooki1 deleted sucessfully");
-    }
-</script>
-<div class="box">
-
-    <div class="innerbox">
-        <p>
-            <center>COOKIES</center>
-        </p>
-
-        <div class="RegId">
-            RegId: <input type="text" id="RegId" placeholder="RegId"><br></div>
-        <div class="RegId">
-            Email: <input type="email" id="Email" placeholder="Email"><br></div>
-        <div class="RegId">
-            Password: <input type="password" id="Password" placeholder="Password"><br>
-        </div>
-        <div class="RegId">
-            <input type="button" value="Set Cookie" onclick="setCookie()">
-            <input type="button" value="Get Cookie" onclick="getCookie()">
-            <input type="button" value="Delete Cookie" onclick="deleteCooki1()">
-            <button onclick="clickCounter()" class="button" type="button">Count</button>
-        </div>
-        <p>Select the color <select id="demo" onchange="show()">
-                <option value="red">Select Color</option>
-                <option value="BBC9FA">Blue</option>
-                <option value="BBFADD">Green</option>
-                <option value="FABBF5d">Pink</option>
-            </select></p>
-        <input type='text' name="server" id="saveServer" placeholder="local storage" />
-
-        <button onclick="save_data()" class="button" type="button">Save</button>
-
-    </div>
-</div>
-
+<body>
+	
+	
+	<div class="container">
+	
+	<div class="row">
+	
+		<div class="col-sm-12">
+		
+			<h1 class="jumbotron text-white text-center" style="background-color: rgba(62, 178, 232, 0.895);"> SPORT DETAILS</h1>
+		
+		</div>
+		
+	</div>
+		
+		<div class="row" style="margin-top: -30px;">
+		
+		<div class="col-sm-3">
+		
+			<div style="background-color: rgb(227, 231, 214); height:500px;">
+			
+				<ul style="list-style: none; font-size:30px;">
+				<li><a href="#!coach">Coach</a></li>
+				<li><a href="#!student">Students</a></li>
+				<li><a href="#!sport">Sport</a></li>
+				<li><a href="#!gallery">Gallery</a></li>
+				
+				</ul>
+				
+			</div>
+			
+		</div>
+			
+			<div class="col-sm-9">
+			
+				<div class="ng-view">
+				
+				
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<div class="row">
+		
+			<div class="col-sm-12">
+			
+				
+			</div>
+		
+		</div>
+	
+	</div>
+	
 </body>
-
 </html>
