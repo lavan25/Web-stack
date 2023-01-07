@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Lavan",
+    "sportid": 12,
+    "sport": "basketball",
+    "Team": "Lakers",
+    "category": "men's"
+  },
+  {
+    "id": 2,
+    "name": "Andriya",
+    "sportid": 22,
+    "sport": "Throwball",
+    "Team": "Warriors",
+    "category": "women's"
+  },
+  {
+    "id": 3,
+    "name": "Athul",
+    "sportid": 12,
+    "sport": "basketball",
+    "Team": "Lakers",
+    "category": "men's"
+  },
+  {
+    "id": 4,
+    "name": "Sridharshan",
+    "sportid": 13,
+    "sport": "cricket",
+    "Team": "CSK",
+    "category": "men's"
+  },
+  {
+    "id": 5,
+    "name": "Athira",
+    "sportid": 14,
+    "sport": "badminton",
+    "Team": "RCB",
+    "category": "women's"
+  },
+  {
+    "id": 6,
+    "name": "Anila",
+    "sportid": 12,
+    "sport": "basketball",
+    "Team": "Lakers",
+    "category": "women's"
+  },
+  {
+    "id": 7,
+    "name": "Manoj",
+    "sportid": 12,
+    "sport": "basketball",
+    "Team": "Lakers",
+    "category": "men's"
+  },
+  {
+    "id": 7,
+    "name": "Manoj",
+    "sportid": 12,
+    "sport": "basketball",
+    "Team": "Lakers",
+    "category": "men's"
+  },
+  {
+    "id": 7,
+    "name": "Manoj",
+    "sportid": 12,
+    "sport": "basketball",
+    "Team": "Lakers",
+    "category": "men's"
+  }
+]
